@@ -57,38 +57,38 @@ List of frameworks/libraries/tools used:
 #### 1. **State-Space Dynamics**
    The spacecraft's motion is modeled using the **Clohessy-Wiltshire-Hill (CWH)** equations, which describe relative motion between two orbiting objects. The continuous-time state-space representation is defined by:
    - **State Vector**: \([x, y, z, \dot{x}, \dot{y}, \dot{z}]\) (relative position and velocity).
-   - **Control Vector**: \([F_x, F_y, F_z]\) (thrust forces in 3 axes).
+   - **Control Vector**: \([a_x, a_y, a_z]\) (acceleration in 3 axes).
    - **Dynamics**:
      \[
      \dot{x} = Ax + Bu
      \]
      where \(A\) and \(B\) are derived from the linearized CWH equations.
 
-   The system is discretized with a sampling time of \(T_s = 3 \, \text{seconds}\) for compatibility with the MPC controller.
+   The system is discretized with a sampling time of \(T_s = 3 \) for compatibility with the MPC controller.
 
 ---
 
 #### 2. **Model Predictive Control (MPC)**
    - **Prediction and Control Horizons**:
-     - Prediction Horizon: 30 steps (\(90 \, \text{seconds}\)).
-     - Control Horizon: 20 steps (\(60 \, \text{seconds}\)).
+     - Prediction Horizon: 30 steps \(90 seconds\).
+     - Control Horizon: 20 steps \(60 seconds\).
    - **Weights**:
      - Minimize control effort to reduce fuel consumption.
      - Prioritize position over velocity to ensure a safer trajectory.
    - **Constraints**:
-     - **Thrust Limits**: Bound thrust forces between \(-\text{maxAcc}\) and \(\text{maxAcc}\).
+     - **Thrust Limits**: Bound thrust forces between \(-maxAcc\) and \(maxAcc\).
      - **Terminal State**: Enforce final position and velocity constraints as soft constraints.
 
 ---
 
 #### 3. **Collision Avoidance**
    - Real-time debris avoidance is implemented by checking the distance between the chaser and debris objects.
-   - If the squared distance is below the safety threshold (\(50 \, \text{m}\)), a dynamic constraint is applied to the MPC problem to avoid collision.
+   - If the squared distance is below the safety threshold \(50 m\), a dynamic constraint is applied to the MPC problem to avoid collision.
 
 ---
 
 #### 4. **Fuel Consumption**
-   - Fuel usage is modeled using the **Tsiolkovsky Rocket Equation**, incorporating specific impulse and exhaust velocity.
+   - Fuel usage is modelled using the **Tsiolkovsky Rocket Equation**, incorporating specific impulse and exhaust velocity.
    - Fuel consumption is tracked over time, and the total mass used is calculated at the end.
 
 ---
@@ -96,7 +96,7 @@ List of frameworks/libraries/tools used:
 ### **Implementation Details**
 1. **MPC Design**:
    - The MPC controller is created using MATLAB's `mpc` function.
-   - Constraints on thrust (\(u\)) and terminal states are enforced directly via the controller's `ManipulatedVariables` and `OutputVariables`.
+   - Constraints on thrust \(u\) and terminal states are enforced directly via the controller's `ManipulatedVariables` and `OutputVariables`.
 
 2. **Debris Avoidance**:
    - Debris trajectories are propagated using the same Hill dynamics.
