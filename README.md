@@ -151,7 +151,7 @@ This project is licensed as Personal Work. The contents of this repository, incl
 ---
 
 ## **Contact**  
-Connect – [tanishqa_jk](https://www.linkedin.com/in/tanishqa-jk/) – khantedtanishqa22@gmail.com  
+Connect – [tanishqa_jk](https://www.linkedin.com/in/tanishqa-jk/) 
 
 Project Link: [https://github.com/Tanishqaaa/path-planning-spacecraft-rendezvous/](https://github.com/Tanishqaaa/path-planning-spacecraft-rendezvous/))  
 
