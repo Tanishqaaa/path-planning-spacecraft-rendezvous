@@ -1,10 +1,10 @@
-Here’s a GitHub README template to understand the project futher:  
+Here’s a GitHub README template to understand the project further:  
 
 ---
 
 # **Path planning for spacecraft rendezvous and collision avoidance**    
 
-> **A service or chaser spacecraft from 5 km away follows an optimized and constraint path to achieve docking with a client or target spacecraft for the use case of in-orbit servicing while avoiding collision from dynamic debris.**  
+> **A service or chaser spacecraft from 5 km away follows an optimized and constrained path to achieve docking with a client or target spacecraft for the use case of in-orbit servicing while avoiding collision from dynamic debris.**  
 
 ---
 
@@ -105,10 +105,6 @@ List of frameworks/libraries/tools used:
 3. **Terminal Constraints**:
    - Soft constraints ensure final position and velocity requirements are met while allowing some flexibility for feasibility.
 
-4. **3D Visualization**:
-   - Relative position and velocity are converted to the **Earth-Centered Inertial (ECI)** frame for animation.
-   - The `satelliteScenario` toolbox is utilized to simulate orbital motion and render the rendezvous in 3D.
-
 ---
 
 ### **Results**
@@ -122,9 +118,6 @@ List of frameworks/libraries/tools used:
 3. **Collision Avoidance**:
    - The chaser successfully avoids all debris objects while adhering to safety margins.
 
-4. **Visualization**:
-   - The animation provides an intuitive understanding of the rendezvous process, including debris avoidance and trajectory adjustments.
-
 ---
 
 ### **Improvements and Extensions**
@@ -134,15 +127,15 @@ List of frameworks/libraries/tools used:
 2. **Advanced Debris Modeling**:
    - Incorporate non-linear dynamics or stochastic modeling for debris motion such as a Kalman Filter
 3. **3D Models**:
-   - Upgrade visualization with detailed spacecraft models and camera animations.
+   - Add visualization with detailed spacecraft models and camera animations.
 4. **Optimization Tuning**:
    - Experiment with prediction and control horizons for better computational efficiency
 5. **Orbital Pertubations**:
-   - Increase the fidelity of model by adding pertubations such as SRP, J2 perturbation, third body perturbation, uneven gravitational field, drag and so on
+   - Increase the fidelity of the model by adding perturbations such as SRP, J2 perturbation, third body perturbation, uneven gravitational field, drag and so on
 
 ---
 
-This implementation demonstrates a robust framework for autonomous rendezvous and proximity operations in space, with a focus on safety, fuel efficiency, and precise terminal state control.
+This implementation demonstrates a robust framework for autonomous rendezvous and proximity operations in space, focusing on safety, fuel efficiency, and precise terminal state control.
 
 
 ### **Instruction for use**  
@@ -151,11 +144,6 @@ Instructions for setting up the project.
 2. Add it to MATLAB path
 3. Run main.m
 
----
-
-Include screenshots or videos where possible.  
-
----
 
 ## **License**  
 This project is licensed as Personal Work. The contents of this repository, including all code, designs, and documentation, are for personal use only and may not be copied, distributed, or shared without explicit written permission from the author. 
@@ -163,7 +151,7 @@ This project is licensed as Personal Work. The contents of this repository, incl
 ---
 
 ## **Contact**  
-Connect – [tanishqa_jk](https://www.linkedin.com/in/tanishqa-jk/) – khantedtanishqa22@gmail.com  
+Connect – [tanishqa_jk](https://www.linkedin.com/in/tanishqa-jk/) 
 
 Project Link: [https://github.com/Tanishqaaa/path-planning-spacecraft-rendezvous/](https://github.com/Tanishqaaa/path-planning-spacecraft-rendezvous/))  
 
