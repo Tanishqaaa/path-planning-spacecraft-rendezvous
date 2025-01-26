@@ -1,7 +1,3 @@
-Here’s a GitHub README template to understand the project further:  
-
----
-
 # **Path planning for spacecraft rendezvous and collision avoidance**    
 
 > **A service or chaser spacecraft from 5 km away follows an optimized and constrained path to achieve docking with a client or target spacecraft for the use case of in-orbit servicing while avoiding collision from dynamic debris.**  
@@ -21,8 +17,8 @@ Here’s a GitHub README template to understand the project further:
 
 ## **About The Project**  
 ### **Purpose**  
-NewSpace involves activities relating to debris removal, avoidance and in-orbit repairs or service of satellites. This project preents a solution to the path planning problem during rendezvous. The problem of rendezvous in space is rather complicated with constraints on thrust, fuel, terminal position, terminal velocity, time and safety margins to prevent collision. Further, the solution needs to be optimized to achieve a time and cost-efficient solution.
-To achieve this following criteria was kept in mind:
+NewSpace involves debris removal, avoidance and in-orbit repairs or service of satellites. This project presents a solution to the path planning problem during rendezvous. The rendezvous problem in space is rather complicated, with constraints on thrust, fuel, terminal position, terminal velocity, time and safety margins to prevent collision. Further, the solution needs to be optimized for a time and cost-efficient solution.
+To achieve this, the following criteria were kept in mind:
 
 ### **Key Challenges**  
 - 🛠️ Maintaining a safe distance from debris  
@@ -51,11 +47,11 @@ List of frameworks/libraries/tools used:
   
 ## **Getting Started**  
 
-**Objective**: To perform a rendezvous maneuver between a chaser spacecraft and a target object in orbit while avoiding debris, minimizing fuel consumption, and adhering to dynamic constraints.   
+**Objective**: To perform a rendezvous manoeuvre between a chaser spacecraft and a target object in orbit while avoiding debris, minimizing fuel consumption, and adhering to dynamic constraints.   
 
 ### **Logic and Methodology**
 #### 1. **State-Space Dynamics**
-   The spacecraft's motion is modeled using the **Clohessy-Wiltshire-Hill (CWH)** equations, which describe relative motion between two orbiting objects. The continuous-time state-space representation is defined by:
+   The spacecraft's motion is modelled using the **Clohessy-Wiltshire-Hill (CWH)** equations, which describe relative motion between two orbiting objects. The continuous-time state-space representation is defined by:
    - **State Vector**: \([x, y, z, \dot{x}, \dot{y}, \dot{z}]\) (relative position and velocity).
    - **Control Vector**: \([a_x, a_y, a_z]\) (acceleration in 3 axes).
    - **Dynamics**:
@@ -73,7 +69,7 @@ List of frameworks/libraries/tools used:
      - Prediction Horizon: 30 steps \(90 seconds\).
      - Control Horizon: 20 steps \(60 seconds\).
    - **Weights**:
-     - Minimize control effort to reduce fuel consumption.
+     - Minimize control efforts to reduce fuel consumption.
      - Prioritize position over velocity to ensure a safer trajectory.
    - **Constraints**:
      - **Thrust Limits**: Bound thrust forces between \(-maxAcc\) and \(maxAcc\).
@@ -89,7 +85,7 @@ List of frameworks/libraries/tools used:
 
 #### 4. **Fuel Consumption**
    - Fuel usage is modelled using the **Tsiolkovsky Rocket Equation**, incorporating specific impulse and exhaust velocity.
-   - Fuel consumption is tracked over time, and the total mass used is calculated at the end.
+   - Fuel consumption is tracked over time, and the total mass used is calculated.
 
 ---
 
@@ -100,7 +96,7 @@ List of frameworks/libraries/tools used:
 
 2. **Debris Avoidance**:
    - Debris trajectories are propagated using the same Hill dynamics.
-   - A collision detection mechanism dynamically adds constraints to the MPC problem when a potential collision is detected.
+   - A collision detection mechanism dynamically adds constraints to the MPC problem when detecting a potential collision.
 
 3. **Terminal Constraints**:
    - Soft constraints ensure final position and velocity requirements are met while allowing some flexibility for feasibility.
@@ -113,7 +109,7 @@ List of frameworks/libraries/tools used:
    - Position and velocity converge to the target within the specified terminal constraints.
 
 2. **Fuel Efficiency**:
-   - Fuel consumption is minimized by penalizing control effort in the MPC optimization.
+   - Fuel consumption is minimized by penalizing control efforts in the MPC optimization.
 
 3. **Collision Avoidance**:
    - The chaser successfully avoids all debris objects while adhering to safety margins.
@@ -125,7 +121,7 @@ List of frameworks/libraries/tools used:
    - Add constraints of atleast 1 m sphere around the target.
    - Add constraint so that the trajectory does not intersect the Earth
 2. **Advanced Debris Modeling**:
-   - Incorporate non-linear dynamics or stochastic modeling for debris motion such as a Kalman Filter
+   - Incorporate non-linear dynamics or stochastic modeling for debris motion, such as a Kalman Filter
 3. **3D Models**:
    - Add visualization with detailed spacecraft models and camera animations.
 4. **Optimization Tuning**:
@@ -141,7 +137,7 @@ This implementation demonstrates a robust framework for autonomous rendezvous an
 ### **Instruction for use**  
 Instructions for setting up the project.  
 1. Download all the files in the same folder  
-2. Add it to MATLAB path
+2. Add it to the MATLAB path
 3. Run main.m
 
 
