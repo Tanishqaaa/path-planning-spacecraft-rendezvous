@@ -1,7 +1,3 @@
-Here’s a GitHub README template to understand the project further:  
-
----
-
 # **Path planning for spacecraft rendezvous and collision avoidance**    
 
 > **A service or chaser spacecraft from 5 km away follows an optimized and constrained path to achieve docking with a client or target spacecraft for the use case of in-orbit servicing while avoiding collision from dynamic debris.**  
